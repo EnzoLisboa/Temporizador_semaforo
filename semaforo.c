@@ -31,9 +31,9 @@ bool timer_callback(struct repeating_timer *t) {
             current_state = YELLOW;
             break;
         case YELLOW:
-            gpio_put(RED_LED_PIN, 1);
-            gpio_put(GREEN_LED_PIN, 1);
-            gpio_put(YELLOW_LED_PIN, 0);
+            gpio_put(RED_LED_PIN, 0);
+            gpio_put(GREEN_LED_PIN, 0);
+            gpio_put(YELLOW_LED_PIN, 1);
             current_state = RED;
             break;
     }
